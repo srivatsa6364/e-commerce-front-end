@@ -1,0 +1,15 @@
+.pro-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.pro-img {
+    width: 70%;
+}
+
+.pro-title {
+    text-align: center;
+}
