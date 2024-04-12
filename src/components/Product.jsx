@@ -5,6 +5,7 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from
 import { mens_kurta } from '../data/men_kurta'
 import ProductCard from './ProductCard'
 import { filters, singleFilter } from './FilterData'
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 const sortOptions = [
   { name: 'Price: Low to High', href: '#', current: false },
@@ -17,8 +18,38 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const navigate = useNavigate();
+  const param = useParams();
+  const location = useLocation();
+
+  const handleFilter = (value, sectionId) => {
+    const searchParams = new URLSearchParams(location.search);
+
+    let filterValues = searchParams.getAll(sectionId);
+
+    if (filterValues.length > 0 && filterValues[0].split(",").includes(value)) {
+      filterValues = filterValues[0]
+        .split(",")
+        .filter((item) => item !== value);
+      if (filterValues.length === 0) {
+        searchParams.delete(sectionId);
+      }
+      console.log("includes");
+    } else {
+      // Remove all values for the current section
+      // searchParams.delete(sectionId);
+      filterValues.push(value);
+    }
+
+    if (filterValues.length > 0)
+      searchParams.set(sectionId, filterValues.join(","));
+
+    // history.push({ search: searchParams.toString() });
+    const query = searchParams.toString();
+    navigate({ search: `?${query}` });
+  };
 
   return (
     <div className="bg-white">
@@ -277,8 +308,8 @@ export default function Example() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full ">
                   <div className="flex flex-wrap justify-center bg-white border py-5 rounded-md ">
-                    {mens_kurta.map((item) => (
-                      <ProductCard product={item} />
+                    {mens_kurta.map((item, index) => (
+                      <ProductCard key={index} product={item} />
                     ))}
                   </div>
                 </div>
