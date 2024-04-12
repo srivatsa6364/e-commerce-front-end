@@ -26,9 +26,9 @@ export default function Product() {
 
   const handleFilter = (value, sectionId) => {
     const searchParams = new URLSearchParams(location.search);
-
+  
     let filterValues = searchParams.getAll(sectionId);
-
+  
     if (filterValues.length > 0 && filterValues[0].split(",").includes(value)) {
       filterValues = filterValues[0]
         .split(",")
@@ -42,11 +42,19 @@ export default function Product() {
       // searchParams.delete(sectionId);
       filterValues.push(value);
     }
-
-    if (filterValues.length > 0)
+  
+    if (filterValues.length > 0) {
       searchParams.set(sectionId, filterValues.join(","));
-
+    }
+  
     // history.push({ search: searchParams.toString() });
+    const query = searchParams.toString();
+    navigate({ search: `?${query}` });
+  };
+  
+  const handleRadioFilterChange = (e, sectionId) => {
+    const searchParams = new URLSearchParams(location.search);
+    searchParams.set(sectionId, e.target.value);
     const query = searchParams.toString();
     navigate({ search: `?${query}` });
   };
@@ -245,6 +253,9 @@ export default function Product() {
                                   type="checkbox"
                                   defaultChecked={option.checked}
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                  onChange={() =>
+                                    handleFilter(option.value, section.id)
+                                  }
                                 />
                                 <label
                                   htmlFor={`filter-${section.id}-${optionIdx}`}
@@ -287,6 +298,9 @@ export default function Product() {
                                   defaultValue={option.value}
                                   type="checkbox"
                                   defaultChecked={option.checked}
+                                  onChange={(e) =>
+                                    handleRadioFilterChange(e, section.id)
+                                  }
                                   className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                 />
                                 <label
