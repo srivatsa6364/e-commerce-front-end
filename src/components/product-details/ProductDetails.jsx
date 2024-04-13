@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import ProductReviewCard from "./ProductReviewCard";
 import { Box, Button, Grid, LinearProgress, Rating } from "@mui/material";
 import { useEffect } from "react";
+import HomeProductCard from "../HomeProductCard";
+import { mens_kurta } from "../../data/men_kurta";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -464,7 +466,15 @@ export default function ProductDetails() {
             </Grid>
           </div>
         </section>
-
+             {/* similer product */}
+             <section className=" pt-10">
+          <h1 className="py-5 text-xl font-bold">Similer Products</h1>
+          <div className="flex flex-wrap space-y-5">
+            {mens_kurta.map((item) => (
+              <HomeProductCard product={item} />
+            ))}
+          </div>
+        </section>
      
       </div>
     </div>
