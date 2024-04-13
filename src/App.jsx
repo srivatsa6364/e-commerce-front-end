@@ -16,12 +16,12 @@ function App() {
     <Routes>
       <Route path="/" element={<Product />} />
     </Routes>
-    <Footer />
   </div> 
 </Router> 
 */
 <div>
   <ProductDetails />
+  <Footer />
 </div>
   )
 }
