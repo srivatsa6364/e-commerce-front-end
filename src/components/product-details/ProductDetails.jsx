@@ -142,10 +142,10 @@ export default function ProductDetails() {
           <div className="lg:col-span-1 mx-auto max-w-2xl px-4 pb-16 sm:px-6  lg:max-w-7xl  lg:px-8 lg:pb-24">
             <div className="lg:col-span-2">
               <h1 className="text-lg lg:text-xl font-semibold tracking-tight text-gray-900  ">
-              dddd
+                dddd
               </h1>
               <h1 className="text-lg lg:text-xl tracking-tight text-gray-900 opacity-60 pt-1">
-                    hdhh
+                hdhh
               </h1>
             </div>
 
@@ -160,7 +160,7 @@ export default function ProductDetails() {
                   ₹44
                 </p>
                 <p className="text-green-600 font-semibold">
-                 43% Off
+                  43% Off
                 </p>
               </div>
 
@@ -318,9 +318,9 @@ export default function ProductDetails() {
             <Grid container spacing={7}>
               <Grid item xs={7}>
                 <div className="space-y-5">
-                
-                    <ProductReviewCard  />
-              
+
+                  <ProductReviewCard />
+
                 </div>
               </Grid>
               <Grid item xs={5}>
@@ -336,138 +336,140 @@ export default function ProductDetails() {
                   <p className="opacity-60">42807 Ratings</p>
                 </div>
                 <Box>
-  <Grid
-    container
-    justifyContent="center"
-    alignItems="center"
-    gap={2}
-  >
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="p-0">Excellent</p>
-    </Grid>
-    <Grid item xs={7}> {/* Use the item prop here */}
-      <LinearProgress
-        className=""
-        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
-        variant="determinate"
-        value={40}
-        color="success"
-      />
-    </Grid>
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="opacity-50 p-2">19259</p>
-    </Grid>
-  </Grid>
-</Box>
-<Box>
-  <Grid
-    container
-    justifyContent="center"
-    alignItems="center"
-    gap={2}
-  >
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="p-0">Very Good</p>
-    </Grid>
-    <Grid item xs={7}> {/* Use the item prop here */}
-      <LinearProgress
-        className=""
-        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
-        variant="determinate"
-        value={30}
-        color="success"
-      />
-    </Grid>
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="opacity-50 p-2">19259</p>
-    </Grid>
-  </Grid>
-</Box>
-<Box>
-  <Grid
-    container
-    justifyContent="center"
-    alignItems="center"
-    gap={2}
-  >
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="p-0">Good</p>
-    </Grid>
-    <Grid item xs={7}> {/* Use the item prop here */}
-      <LinearProgress
-        className="bg-[#885c0a]"
-        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
-        variant="determinate"
-        value={25}
-        color="warning"
-      />
-    </Grid>
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="opacity-50 p-2">19259</p>
-    </Grid>
-  </Grid>
-</Box>
-<Box>
-  <Grid
-    container
-    justifyContent="center"
-    alignItems="center"
-    gap={2}
-  >
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="p-0">Average</p>
-    </Grid>
-    <Grid item xs={7}> {/* Use the item prop here */}
-      <LinearProgress
-        className=""
-        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7, "& .MuiLinearProgress-bar": {
-          bgcolor: "#885c0a", // stroke color
-        },}}
-        variant="determinate"
-        value={21}
-        color="success"
-      />
-    </Grid>
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="opacity-50 p-2">19259</p>
-    </Grid>
-  </Grid>
-</Box>
-<Box>
-  <Grid
-    container
-    justifyContent="center"
-    alignItems="center"
-    gap={2}
-  >
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="p-0">Poor</p>
-    </Grid>
-    <Grid item xs={7}> {/* Use the item prop here */}
-      <LinearProgress
-        className=""
-        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
-        variant="determinate"
-        value={10}
-        color="error"
-      />
-    </Grid>
-    <Grid item xs={2}> {/* Use the item prop here */}
-      <p className="opacity-50 p-2">19259</p>
-    </Grid>
-  </Grid>
-</Box>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="p-0">Excellent</p>
+                    </Grid>
+                    <Grid item xs={7}> {/* Use the item prop here */}
+                      <LinearProgress
+                        className=""
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={40}
+                        color="success"
+                      />
+                    </Grid>
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="opacity-50 p-2">19259</p>
+                    </Grid>
+                  </Grid>
+                </Box>
+                <Box>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="p-0">Very Good</p>
+                    </Grid>
+                    <Grid item xs={7}> {/* Use the item prop here */}
+                      <LinearProgress
+                        className=""
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={30}
+                        color="success"
+                      />
+                    </Grid>
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="opacity-50 p-2">19259</p>
+                    </Grid>
+                  </Grid>
+                </Box>
+                <Box>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="p-0">Good</p>
+                    </Grid>
+                    <Grid item xs={7}> {/* Use the item prop here */}
+                      <LinearProgress
+                        className="bg-[#885c0a]"
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={25}
+                        color="warning"
+                      />
+                    </Grid>
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="opacity-50 p-2">19259</p>
+                    </Grid>
+                  </Grid>
+                </Box>
+                <Box>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="p-0">Average</p>
+                    </Grid>
+                    <Grid item xs={7}> {/* Use the item prop here */}
+                      <LinearProgress
+                        className=""
+                        sx={{
+                          bgcolor: "#d0d0d0", borderRadius: 4, height: 7, "& .MuiLinearProgress-bar": {
+                            bgcolor: "#885c0a", // stroke color
+                          },
+                        }}
+                        variant="determinate"
+                        value={21}
+                        color="success"
+                      />
+                    </Grid>
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="opacity-50 p-2">19259</p>
+                    </Grid>
+                  </Grid>
+                </Box>
+                <Box>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="p-0">Poor</p>
+                    </Grid>
+                    <Grid item xs={7}> {/* Use the item prop here */}
+                      <LinearProgress
+                        className=""
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={10}
+                        color="error"
+                      />
+                    </Grid>
+                    <Grid item xs={2}> {/* Use the item prop here */}
+                      <p className="opacity-50 p-2">19259</p>
+                    </Grid>
+                  </Grid>
+                </Box>
 
 
-                
-               
-</Grid>
+
+
+              </Grid>
 
             </Grid>
           </div>
         </section>
-             {/* similer product */}
-             <section className=" pt-10">
+        {/* similer product */}
+        <section className=" pt-10">
           <h1 className="py-5 text-xl font-bold">Similer Products</h1>
           <div className="flex flex-wrap space-y-5">
             {mens_kurta.map((item) => (
@@ -475,7 +477,7 @@ export default function ProductDetails() {
             ))}
           </div>
         </section>
-     
+
       </div>
     </div>
   );
